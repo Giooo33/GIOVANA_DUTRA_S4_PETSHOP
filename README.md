@@ -10,3 +10,4 @@ Para executar este projeto localmente, siga estes passos:
 ```bash
 git clone [https://github.com/Giooo33/GIOVANA_DUTRA_S4_PETSHOP.git](https://github.com/Giooo33/GIOVANA_DUTRA_S4_PETSHOP.git)
 cd GIOVANA_DUTRA_S4_PETSHOP
+<img width="1919" height="853" alt="image" src="https://github.com/user-attachments/assets/9abc255d-b8fd-4c71-a36e-947d5dabc54e" />
