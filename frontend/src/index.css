@@ -1,0 +1,308 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #f4f4f4; /* Fundo cinza claro para o app */
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+}
+/* === Fim do Padrão Vite === */
+
+
+/* ======================================================= */
+/* NOSSO CSS CUSTOMIZADO COMPLETO */
+/* ======================================================= */
+
+/* --- Estilos do Menu (App.jsx) --- */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 60px;
+  background-color: #333;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  flex-shrink: 0; /* Impede o menu de encolher */
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.nav-links a:hover {
+  background-color: #555;
+  color: white; /* Garante que o 'a:hover' padrão não afete */
+}
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn-logout {
+  background-color: #d9534f !important; /* !important para sobrescrever outros */
+  color: white !important;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-logout:hover {
+  background-color: #c9302c !important;
+}
+
+.content {
+  flex-grow: 1; 
+  padding: 20px;
+}
+
+
+/* --- Estilos Gerais (FormTabela.css) --- */
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto; /* 0 auto (sem margem no topo, já tem no .content) */
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  color: #333; 
+}
+
+/* Estilos dos Formulários */
+.form-container, .busca-container {
+  background: #ffffff; /* Fundo branco */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.form-container form, .busca-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.busca-container form {
+  flex-direction: row;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="number"],
+input[type="date"],
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #333; 
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box; /* Garante que o padding não quebre o layout */
+}
+
+label {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: -5px; /* Aproxima o label do input */
+}
+
+.form-botoes {
+  display: flex;
+  gap: 10px;
+}
+
+/* Estilos de Botão Padrão */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+  border-color: transparent; 
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.btn-cancelar {
+  background-color: #6c757d !important;
+}
+.btn-cancelar:hover {
+  background-color: #5a6268 !important;
+}
+
+/* Erros e Sucessos */
+.erro-validacao {
+  color: #d9534f;
+  font-size: 0.9rem;
+}
+.erro-api {
+  color: #d9534f;
+  background: #f2dede;
+  border: 1px solid #ebccd1;
+  padding: 10px;
+  border-radius: 4px;
+}
+.sucesso-api {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+
+/* Estilos da Tabela */
+.tabela-container {
+  width: 100%;
+  overflow-x: auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  color: #333; 
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.acoes {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.btn-editar {
+  background-color: #ffc107 !important;
+  color: #333 !important;
+}
+.btn-editar:hover {
+  background-color: #e0a800 !important;
+}
+
+.btn-excluir {
+  background-color: #d9534f !important;
+}
+.btn-excluir:hover {
+  background-color: #c9302c !important;
+}
+
+/* Requisito 3: Destaque visual */
+.estoque-baixo {
+  background-color: #fffbe6 !important; /* Amarelo claro */
+  color: #8a6d3b !important;
+  font-weight: bold;
+}
+
+.login-container {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100vw;
+height: 100vh;
+background-color: #f4f4f4; /* Fundo claro para a página de login */
+}
+
+.login-form {
+background: #fff;
+padding: 40px;
+border-radius: 8px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+text-align: center;
+width: 100%;
+max-width: 400px;
+}
+.login-form h2 {
+margin-top: 0;
+color: #333; /* Garante que o h2 seja escuro no fundo claro /
+}
+.login-form p {
+color: #666; / Garante que o p seja escuro no fundo claro */
+}
+
+.login-form input {
+margin-top: 15px;
+width: calc(100% - 20px); /* Ajusta a largura */
+}
+.login-form button {
+margin-top: 20px;
+width: 100%;
+}
