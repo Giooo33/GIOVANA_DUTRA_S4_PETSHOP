@@ -6,6 +6,22 @@ Este projeto é um sistema de gerenciamento para Pet Shops, permitindo o control
 
 Para executar este projeto localmente, siga estes passos:
 
+## Como rodar o projeto
+
+1. Instale as dependências:
+   pip install django
+   npm install
+   
+3. Execute as migrações dentro do 'petshop_backend':
+   python manage.py makemigrations
+   python manage.py migrate
+
+4. Inicie o servidor:
+   Abra um terminal e execute dentro da pasta 'petshop_backend':
+     python manage.py runserver
+   Abra outr terminal e execute dentro da pasta 'frontend':
+     npm run dev (e entre no link)   
+
 **1. Clonar o repositório:**
 ```bash
 git clone [https://github.com/Giooo33/GIOVANA_DUTRA_S4_PETSHOP.git](https://github.com/Giooo33/GIOVANA_DUTRA_S4_PETSHOP.git)
