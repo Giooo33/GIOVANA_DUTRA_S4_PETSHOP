@@ -13,13 +13,19 @@ Para executar este projeto localmente, siga estes passos:
    npm install
    
 3. Execute as migrações dentro do 'petshop_backend':
+   
    python manage.py makemigrations
+   
    python manage.py migrate
 
 4. Inicie o servidor:
+   
    Abra um terminal e execute dentro da pasta 'petshop_backend':
+     
      python manage.py runserver
+  
    Abra outr terminal e execute dentro da pasta 'frontend':
+     
      npm run dev (e entre no link)   
 
 **1. Clonar o repositório:**
